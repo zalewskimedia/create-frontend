@@ -1,4 +1,4 @@
-# 🦚 create-frontend for Wagtail & Django
+# Frontend setup for Wagtail/Django projects
 
 A simple starter kit that integrates **Parcel**, **Tailwind CSS**, **Alpine.js**, and **Axios** into your **Wagtail/Django** project — ready to go with just one command.
 
@@ -19,39 +19,42 @@ This will:
   - `js/` for your JavaScript (with Alpine & Axios)
   - `css/` for your Tailwind styles
 - Configure build targets (Wagtail) with **Parcel**
+- Ask for your main app name to automatically update all paths
 
 ---
 
 ## ⚙️ Setup Steps
 
-### 1. Update paths in `package.json`
+### 1. Paths in `package.json` will be automatically updated
 
-After installation, adjust the `"distDir"` paths in your `package.json` to point to your project's static directories:
+During installation, you'll be prompted to enter your main app name. The paths in `package.json` will be automatically configured based on your input. For example:
 
 ```json
 "targets": {
   "main": {
     "source": "src/js/index.js",
-    "distDir": "your_app/static/js",
+    "distDir": "app_name/static/js",
     "publicUrl": "/static/js/"
   },
   "styles": {
     "source": "src/css/style.css",
-    "distDir": "your_app/static/css",
+    "distDir": "app_name/static/css",
     "publicUrl": "/static/css/"
   },
   "images": {
-    "distDir": "your_app/static/images",
+    "distDir": "app_name/static/images",
     "publicUrl": "/static/images/"
   },
   "fonts": {
-    "distDir": "your_app/static/fonts",
+    "distDir": "app_name/static/fonts",
     "publicUrl": "/static/fonts/"
   }
 }
 ```
 
-Replace `your_app` with the actual name of your Django app where static files live.
+This replace `app_name` with the actual name of your Wagtail app where static files live.
+
+
 
 ---
 
@@ -98,9 +101,10 @@ This is designed for modern **Wagtail** or **Django** projects that want to:
 - Use modern frontend tooling
 - Keep everything neatly integrated in one repo
 
+You can freely extend this package with any additional libraries that your project requires. Simply install them using your preferred package manager (npm or yarn) and they will be automatically included in your build.
+
 ---
 
 ## 💡 Author
 
 Made with ❤️ by [Wojciech Zalewski](https://github.com/zalewskimedia)
-

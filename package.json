@@ -1,6 +1,6 @@
 {
     "name": "@elevennodes/wagtail-frontend",
-    "version": "1.0.3",
+    "version": "1.0.5",
     "bin": {
       "wagtail-frontend": "bin/index.js"
     },
@@ -12,7 +12,8 @@
     "access": "public"
     },
     "dependencies": {
-      "fs-extra": "^11.1.1"
+      "fs-extra": "^11.1.1",
+      "inquirer": "^9.2.10"
     }
   }
   

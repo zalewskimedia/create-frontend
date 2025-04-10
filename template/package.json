@@ -11,28 +11,7 @@
   "distDir": "./", 
   "publicUrl": "/"
   },
-  "targets": {
-    "main": {
-      "source": "src/js/[change me].js",
-      "distDir": "[change me]/static/js",
-      "publicUrl": "/static/js/"
-    },
-    "styles": {
-      "source": "src/css/[change me].css",
-      "distDir": "[change me]/static/css",
-      "publicUrl": "/static/css/"
-    },
-    "fonts": {
-      "source": "src/fonts/**/*.{woff,woff2,ttf,otf,eot}",
-      "distDir": "[change me]/static/fonts",
-      "publicUrl": "/static/fonts/"
-    },
-    "images": {
-      "source": "src/img/**/*.{png,jpg,jpeg,svg,gif,webp}",
-      "distDir": "[change me]/static/images",
-      "publicUrl": "/static/img/"
-    }
-  },
+  "targets": {},
   "keywords": [],
   "author": "Wojciech Zalewski",
   "license": "ISC",
