@@ -9,7 +9,7 @@ A simple starter kit that integrates **Parcel**, **Tailwind CSS**, **Alpine.js**
 Use this package to scaffold the frontend environment in any Django/Wagtail project:
 
 ```bash
-npx github:zalewskimedia/create-frontend
+npx @elevennodes/wagtail-frontend
 ```
 
 This will:

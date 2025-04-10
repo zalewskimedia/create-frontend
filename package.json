@@ -1,7 +1,8 @@
 {
-  "name": "create-frontend",
+  "name": "@elevennodes/wagtail-frontend",
   "version": "1.0.0",
   "description": "Simple frontend blueprint for Wagtail apps",
+  "tags": ["wagtail", "django", "frontend", "parcel", "tailwindcss", "alpinejs", "axios"],
   "scripts": {
     "dev": "parcel watch",
     "build": "parcel build"
