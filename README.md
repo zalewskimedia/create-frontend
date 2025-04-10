@@ -18,7 +18,7 @@ This will:
 - Setup a `src/` directory containing:
   - `js/` for your JavaScript (with Alpine & Axios)
   - `css/` for your Tailwind styles
-- Configure build targets with **Parcel**
+- Configure build targets (Wagtail) with **Parcel**
 
 ---
 

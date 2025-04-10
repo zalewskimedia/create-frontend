@@ -1,14 +1,16 @@
 {
     "name": "@elevennodes/wagtail-frontend",
-    "version": "1.0.0",
+    "version": "1.0.3",
     "bin": {
-      "create-frontend": "bin/index.js"
+      "wagtail-frontend": "bin/index.js"
     },
     "files": [
       "bin",
       "template"
     ],
-    "type": "module",
+    "publishConfig": {
+    "access": "public"
+    },
     "dependencies": {
       "fs-extra": "^11.1.1"
     }

@@ -1,12 +1,19 @@
 #!/usr/bin/env node
-import { copy } from 'fs-extra';
-import path from 'path';
-import { fileURLToPath } from 'url';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const path = require("path");
+const fs = require("fs-extra");
+
+const templateDir = path.join(__dirname, "..", "template");
 const targetDir = process.cwd();
-const templateDir = path.join(__dirname, '../template');
 
-copy(templateDir, targetDir).then(() => {
-  console.log('✅ Frontend boilerplate copied!');
+console.log("🚀 Scaffolding frontend...");
+
+// Kopiuj wszystko z `template` do katalogu roboczego
+fs.copy(templateDir, targetDir, { overwrite: true }, err => {
+  if (err) {
+    console.error("❌ Error copying template files:", err);
+    process.exit(1);
+  }
+  console.log("✅ Frontend template created successfully.");
 });
+
