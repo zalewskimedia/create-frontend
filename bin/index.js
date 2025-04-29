@@ -12,7 +12,7 @@ const askAppName = async () => {
   });
 
   return new Promise(resolve => {
-    rl.question("📛 What's your Wagtail app name? ", answer => {
+    rl.question("📛 What's your main app name? ", answer => {
       rl.close();
       resolve(answer.trim());
     });
@@ -40,18 +40,13 @@ const askAppName = async () => {
     path.join(targetDir, `src/css/${appName}.css`)
   );
 
-  // 3. Zamień import w pliku JS
-  const jsPath = path.join(targetDir, `src/js/${appName}.js`);
-  let jsContent = await fs.readFile(jsPath, "utf-8");
-  jsContent = jsContent.replace(/import\s+['"].*\.css['"]/, `import '../css/${appName}.css'`);
-  await fs.writeFile(jsPath, jsContent, "utf-8");
 
-  // 4. Podmień `package.json` targets
+  // 3. Podmień `package.json` targets
   const pkgPath = path.join(targetDir, "package.json");
   const pkg = await fs.readJSON(pkgPath);
 
   pkg.targets = {
-    main: {
+    scriptst: {
       source: `src/js/${appName}.js`,
       distDir: `${appName}/static/js`,
       publicUrl: "/static/js/"
@@ -60,16 +55,6 @@ const askAppName = async () => {
       source: `src/css/${appName}.css`,
       distDir: `${appName}/static/css`,
       publicUrl: "/static/css/"
-    },
-    images: {
-      source: `src/img/**/*.{png,jpg,jpeg,svg,gif,webp}`,
-      distDir: `${appName}/static/images`,
-      publicUrl: "/static/images/"
-    },
-    fonts: {
-      source: `src/fonts/**/*.{woff,woff2,ttf,otf,eot}`,
-      distDir: `${appName}/static/fonts`,
-      publicUrl: "/static/fonts/"
     }
   };
 

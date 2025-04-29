@@ -1,6 +1,6 @@
 {
     "name": "@elevennodes/wagtail-frontend",
-    "version": "1.0.5",
+    "version": "1.0.7",
     "bin": {
       "wagtail-frontend": "bin/index.js"
     },
@@ -15,6 +15,16 @@
       "fs-extra": "^11.1.1",
       "inquirer": "^9.2.10"
     },
-    "license": "MIT"
+    "license": "MIT",
+    "description": "Create a frontend for your Wagtail project",
+    "keywords": [
+      "wagtail",
+      "django",
+      "frontend",
+      "tailwindcss",
+      "parcel",
+      "alpinejs",
+      "axios"
+    ]
   }
   
