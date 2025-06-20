@@ -1,6 +1,6 @@
 {
   "name": "@elevennodes/wagtail-frontend",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "Simple frontend blueprint for Django and Wagtail apps",
   "tags": ["wagtail", "django", "frontend", "parcel", "tailwindcss", "alpinejs", "axios"],
   "scripts": {

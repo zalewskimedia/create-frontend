@@ -1,6 +1,6 @@
 {
     "name": "@elevennodes/wagtail-frontend",
-    "version": "1.0.7",
+    "version": "1.0.9",
     "bin": {
       "wagtail-frontend": "bin/index.js"
     },
